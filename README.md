@@ -52,5 +52,13 @@ $PROJECT_ROOT
   - [ ] Get new access token with refresh tokens
 
 ## List Of Components
-- [ ] Test 
-  - [ ] 
+- [ ] Navbar
+  - [ ] Back Buttons
+- [ ] About Accordion 
+- [ ] Slider
+- [ ] Right & Left Buttons
+- [ ] Title For Island
+- [ ] Island
+- [ ] Island desc
+- [ ] Categories Button
+- [ ] Card (For Showing Item)
