@@ -1,8 +1,12 @@
-import React from 'react'
+import Navbar from '../components/Navbar'
 
 function HomePage() {
   return (
-    <div>Home.page</div>
+    <>
+      <header className='sticky top-0'>
+        <Navbar />
+      </header>
+    </>
   )
 }
 
