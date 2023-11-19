@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        default: ['"Source Sans 3"', 'sans-serif']
+        default: ['Source Sans 3', 'sans-serif']
     },
     colors: {
       primary: "#03AC0E"

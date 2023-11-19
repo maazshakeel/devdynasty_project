@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar'
+import Welcome from '../components/Welcome'
 
 function HomePage() {
   return (
@@ -6,6 +7,9 @@ function HomePage() {
       <header className='sticky top-0'>
         <Navbar />
       </header>
+      <main>
+        <Welcome/>
+      </main>
     </>
   )
 }
