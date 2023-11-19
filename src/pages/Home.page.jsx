@@ -3,8 +3,15 @@ import Navbar from "../components/Navbar";
 import Province from "../components/Province";
 import Welcome from "../components/Welcome";
 import Footer from "../components/Footer";
+import Slider from "../components/Slider";
 
 function HomePage() {
+  let slides = [
+    "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
+    "https://wallpapercave.com/wp/wp3386769.jpg",
+    "https://wallpaperaccess.com/full/809523.jpg",
+    "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
+  ];
   return (
     <>
       <header className="sticky top-0 z-50">
@@ -20,10 +27,13 @@ function HomePage() {
           <p className="font-bold opacity-80">Klik Pulaunya Untuk Detail
             Lebih Lanjut!</p>
         </div>
+        <div className="w-[60%] m-auto pt-11">
+          <Slider slides={slides} />
+        </div>
         <AccordionAbout />
       </main>
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
     </>
   );
