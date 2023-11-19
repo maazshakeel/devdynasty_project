@@ -1,3 +1,4 @@
+import AccordionAbout from '../components/AccordionAbout'
 import Navbar from '../components/Navbar'
 
 function HomePage() {
@@ -5,6 +6,7 @@ function HomePage() {
     <>
       <header className='sticky top-0'>
         <Navbar />
+        <AccordionAbout />
       </header>
     </>
   )
