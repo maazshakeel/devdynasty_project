@@ -2,6 +2,7 @@ import AccordionAbout from "../components/AccordionAbout";
 import Navbar from "../components/Navbar";
 import Province from "../components/Province";
 import Welcome from "../components/Welcome";
+import Footer from "../components/Footer";
 
 function HomePage() {
   return (
@@ -21,6 +22,9 @@ function HomePage() {
         </div>
         <AccordionAbout />
       </main>
+      <footer>
+        <Footer/>
+      </footer>
     </>
   );
 }
