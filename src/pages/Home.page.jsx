@@ -1,5 +1,6 @@
 import AccordionAbout from '../components/AccordionAbout'
 import Navbar from '../components/Navbar'
+import Welcome from '../components/Welcome'
 
 function HomePage() {
   return (
@@ -8,6 +9,9 @@ function HomePage() {
         <Navbar />
         <AccordionAbout />
       </header>
+      <main>
+        <Welcome/>
+      </main>
     </>
   )
 }
