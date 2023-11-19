@@ -9,7 +9,7 @@ export default function AccordionItem({ title, content }) {
     }
 
     return (
-        <div onClick={toggleClick} className="hover:cursor-pointer px-5 py-2 font-default">
+        <div onClick={toggleClick} className="border border-[#B6C2E2] rounded-lg hover:cursor-pointer px-5 py-2 font-default">
             <div className="flex justify-between">
                 <h2 className="font-semibold text-xl">{title}</h2>
                 <button onClick={toggleClick}>
@@ -18,12 +18,12 @@ export default function AccordionItem({ title, content }) {
                     </svg>
                 </button>
             </div>
-            <div className={`transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
-                {isOpen &&
-                    <div>{content}</div>
-                }
+            <div
+                className={`overflow-hidden transition ${isOpen ? 'max-h-96' : 'max-h-0 '}`}
+                style={{ transition: isOpen ? '0.5s ' : '0.1s '}}
+            >
+                <p>{content}</p>
             </div>
-            <hr className="mt-2" />
         </div>
     )
 }
