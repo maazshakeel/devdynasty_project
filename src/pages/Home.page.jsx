@@ -5,6 +5,7 @@ import Welcome from "../components/Welcome";
 import Footer from "../components/Footer";
 import Slider from "../components/Slider";
 import Loader from "../components/Loader";
+import Heading from "../components/Heading";
 
 function HomePage() {
   let slides = [
@@ -21,9 +22,9 @@ function HomePage() {
       <main>
         <Welcome />
         <div className="w-full flex flex-col justify-center gap-7 items-center mt-4">
-          <div className="p-4 px-12 w-fit border-primary border-solid border-2 rounded-lg hover:bg-green-100/25">
+          {/* <div className="p-4 px-12 w-fit border-primary border-solid border-2 rounded-lg hover:bg-green-100/25">
             <h1 className="font-bold lg:text-3xl md:text-3xl sm:text-2xl text-xl">Pulau<br /><span className="text-primary">Jawa</span></h1>
-          </div>
+          </div> */}
           <Province />
           <p className="font-normal opacity-80">Klik Pulaunya Untuk Detail
             Lebih Lanjut!</p>
