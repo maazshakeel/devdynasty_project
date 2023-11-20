@@ -12,9 +12,9 @@ export default function AccordionItem({ title, content }) {
     const headingId = `accordion-heading-${title.replace(/\s+/g, "-").toLowerCase()}`;
 
     return (
-        <div onClick={toggleClick} className="border border-[#B6C2E2] rounded-lg hover:cursor-pointer px-5 py-2 font-default">
+        <div onClick={toggleClick} className="border border-[#B6C2E2] rounded-lg hover:cursor-pointer px-5 py-2 font-default sm:w-[75%] sm:self-center md:w-[60%]">
             <div className="flex justify-between">
-                <h2 id={headingId} className="font-semibold text-xl">
+                <h2 id={headingId} className="font-semibold text-lg md:text-xl">
                     {title}
                 </h2>
                 <button aria-labelledby={headingId} onClick={toggleClick}>

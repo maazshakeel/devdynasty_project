@@ -29,8 +29,11 @@ function HomePage() {
           <p className="font-normal opacity-80">Klik Pulaunya Untuk Detail
             Lebih Lanjut!</p>
         </div>
-        <div className="w-full sm:w-[75%] sm:m-auto md:w-[60%] pt-11">
+        <div className="w-full sm:w-[75%] mt-5 sm:mx-auto md:w-[60%]">
+        <h2 className="text-3xl font-semibold font-default ml-5 sm:ml-0">Preview</h2>
+        <div className="pt-4">
           <Slider slides={slides} />
+        </div>
         </div>
         <AccordionAbout />
       </main>
