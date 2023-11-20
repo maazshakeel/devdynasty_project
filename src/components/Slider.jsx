@@ -21,19 +21,19 @@ export default function Slider({ slides }) {
     };
 
     return (
-        <div className="overflow-hidden relative rounded-md">
+        <div className="overflow-hidden relative sm:rounded-md">
             <div
                 className={`flex transition ease-out duration-40`}
                 style={{
                     transform: `translateX(-${current * 100}%)`,
                 }}
             >
-                {slides.map((s) => {
-                    return <img src={s} />;
+                {slides.map((s , index) => {
+                    return <img src={s} key={index}/>;
                 })}
             </div>
 
-            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-10 text-3xl">
+            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white text-3xl px-4 sm:px-6">
                 <button onClick={previousSlide}>
                     <FaChevronLeft />
                 </button>

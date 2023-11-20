@@ -9,7 +9,7 @@ function HomePage() {
   let slides = [
     "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
     "https://wallpapercave.com/wp/wp3386769.jpg",
-    "https://wallpaperaccess.com/full/809523.jpg",
+    "https://source.unsplash.com/755x480?mountain",
     "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
   ];
   return (
@@ -24,10 +24,10 @@ function HomePage() {
             <h1 className="font-bold lg:text-3xl md:text-3xl sm:text-2xl text-xl">Pulau<br /><span className="text-primary">Jawa</span></h1>
           </div>
           <Province />
-          <p className="font-bold opacity-80">Klik Pulaunya Untuk Detail
+          <p className="font-normal opacity-80">Klik Pulaunya Untuk Detail
             Lebih Lanjut!</p>
         </div>
-        <div className="w-[60%] m-auto pt-11">
+        <div className="w-full sm:w-[75%] sm:m-auto md:w-[60%] pt-11">
           <Slider slides={slides} />
         </div>
         <AccordionAbout />
