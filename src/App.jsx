@@ -1,16 +1,22 @@
 import "./App.css";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/Home.page";
-import NoPage from "./pages/NoPage.page";
+import Loader from "./components/Loader";
+
+const HomePage = lazy(() => import("./pages/Home.page"));
+const NoPage = lazy(() => import("./pages/NoPage.page"));
+
 
 function App() {
   return (
     // #1
     <BrowserRouter>
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="*" element={<NoPage />} />
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   )
 }
