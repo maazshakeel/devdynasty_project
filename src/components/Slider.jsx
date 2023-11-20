@@ -26,7 +26,7 @@ export default function Slider({ slides }) {
                 ))}
             </div>
 
-            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white text-3xl px-4 sm:px-6">
+            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white text-3xl px-4 sm:px-6 ">
                 <button onClick={previousSlide} aria-label="Previous Slide">
                     <FaChevronLeft />
                 </button>
