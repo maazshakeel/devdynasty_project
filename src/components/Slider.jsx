@@ -22,7 +22,7 @@ export default function Slider({ slides }) {
                 }}
             >
                 {slides.map((s, index) => (
-                    <img key={index} src={s} alt={`Slide ${index + 1}`} />
+                    <img key={index} src={s} alt={`Slide ${index + 1}`} width={'auto'} height={'auto'}/>
                 ))}
             </div>
 
