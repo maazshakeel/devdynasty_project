@@ -26,7 +26,7 @@ export default function Welcome() {
                 <div className="">
                     <h1 className='font-semibold text-3xl w-[80%] mb-[11px] leading-[32.608px] md:text-4xl lg:text-[50px] lg:leading-none lg:w-full'>Welcome To MuseumJawa!</h1>
                     <p className='w-[80%] font-light text-sm mb-[10px] sm:w-full lg:w-[80%] lg:text-lg lg:mb-[20px]'>Jelajahi kekayaan budaya dari Jawa melalui pengalaman interaktif yang unik dan memukau!</p>
-                    <button className='w-[110px] h-[35px] bg-primary font-default text-center text-white rounded-[10px] lg:w-[150px] lg:h-[45px] lg:text-xl'>Explore</button>
+                    <button className='w-[110px] h-[35px] bg-[#135f1a] hover:bg-[#05670D] font-default text-center text-white rounded-[5px] lg:w-[150px] lg:h-[45px] lg:text-xl shadow-md'>Explore</button>
                 </div>
             </div>
             <div className="w-full h-[350px] sm:relative sm:w-[55%] sm:h-[100%]">
