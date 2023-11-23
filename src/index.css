@@ -12,4 +12,8 @@
     .province-hover {
         @apply transition-transform hover:cursor-pointer hover:translate-y-[-.5rem] hover:transform-gpu  hover:opacity-95;
     }
+
+    .img-shape{
+        clip-path: polygon(38% 0, 100% 0, 100% 100%, 0% 100%);
+    }
 }
