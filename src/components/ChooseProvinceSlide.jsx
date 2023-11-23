@@ -35,7 +35,7 @@ export default function ChooseProvinceSlide() {
                     <FaChevronLeft size={30} />
                 </button>
                 <Link to={province.link} className="self-center" >
-                    <img src={`/public/img/${index}.png`} />
+                    <img src={`/img/${index}.png`} />
                 </Link>
                 <button onClick={handleNextClick} className="absolute lg:right-[32%] right-[5%] top-[44%]">
                     <FaChevronRight size={30} />
