@@ -19,6 +19,27 @@ const Province = () => {
     const [firstText, setFirstText] = useState("Pulau")
     const [secondText, setSecondText] = useState("Jawa")
 
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 640);
+        };
+
+        // Initial check
+        handleResize();
+
+        // Event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+
     useEffect(() => {
         if (isBantenHovered) {
             setFirstText("Provinsi")
@@ -95,7 +116,7 @@ const Province = () => {
                 filter: 'drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25))'
             }} className="flex justify-center group transition-all">
                 <Link
-                    to="/banten" className="mr-[-1rem] transition-all group-hover:mr-[0.5rem]"
+                    to={`${isMobile ? '/choose' : '/banten/details'}`} className="mr-[-1rem] transition-all group-hover:mr-[0.5rem]"
                     aria-label='banten'
                     onMouseEnter={() => onBantentHoverHandler(true)}
                     onMouseLeave={() => onBantentHoverHandler(false)}
@@ -104,7 +125,7 @@ const Province = () => {
                     <Banten />
                 </Link>
                 <Link
-                    to="/dkijakarta"
+                    to={`${isMobile ? '/choose' : '/dkijakarta/details'}`}
                     className="absolute start-[53px] top-[5px] transition-all group-hover:start-[60px] group-hover:scale-150"
                     aria-label='dkijakarta'
                     onMouseEnter={() => onDkiJakartaHoverHandler(true)}
@@ -113,44 +134,44 @@ const Province = () => {
                     <DkiJakarta />
                 </Link>
                 <Link
-                    to="/jawabarat"
+                    to={`${isMobile ? '/choose' : '/jawabarat/details'}`}
                     aria-label='jawabarat'
-                    onMouseEnter={() => onJawaBaratHoverHandler(true)}
-                    onMouseLeave={() => onJawaBaratHoverHandler(false)}
-                    className="mr-[-1rem] transition-all group-hover:mr-[0.5rem] group-hover:ml-[0.5rem]"
-                >
-                    <JawaBarat />
-                </Link>
-                <div className="mr-[-2rem] mt-4 transition-all group-hover:mr-[0.5rem]">
-                    <div className="flex flex-col items-center">
-                        <Link
-                            to="/jawatengah"
-                            aria-label='jawatengah'
-                            onMouseEnter={() => onJawaTengahHoverHandler(true)}
-                            onMouseLeave={() => onJawaTengahHoverHandler(false)}
-                            className="mb-[-1.5rem] transition-all group-hover:mb-[1px]">
-                            <JawaTengah />
-                        </Link>
-                        <Link
-                            to="/yogjakarta"
-                            aria-label='yogjakarta'
-                            onMouseEnter={() => onYogjakartaHoverHandler(true)}
-                            onMouseLeave={() => onYogjakartaHoverHandler(false)}
-                            className="ml-[1.5rem]">
-                            <Yogyakarta />
-                        </Link>
-                    </div>
-                </div>
-                <Link
-                    to="/jawatimur"
-                    aria-label='jawatimur'
-                    onMouseEnter={() => onJawaTimurHoverHandler(true)}
-                    onMouseLeave={() => onJawaTimurHoverHandler(false)}
-                    className="mt-[1.9rem]">
-                    <JawaTimur />
-                </Link>
-            </div>
-        </div>
+                onMouseEnter = {() => onJawaBaratHoverHandler(true)}
+                onMouseLeave = {() => onJawaBaratHoverHandler(false)}
+                className = "mr-[-1rem] transition-all group-hover:mr-[0.5rem] group-hover:ml-[0.5rem]"
+    >
+                <JawaBarat />
+            </Link >
+            <div className="mr-[-2rem] mt-4 transition-all group-hover:mr-[0.5rem]">
+                <div className="flex flex-col items-center">
+                    <Link
+                        to={`${isMobile ? '/choose' : '/jawatengah/details'}`}
+                        aria-label='jawatengah'
+                        onMouseEnter={() => onJawaTengahHoverHandler(true)}
+                        onMouseLeave={() => onJawaTengahHoverHandler(false)}
+                        className="mb-[-1.5rem] transition-all group-hover:mb-[1px]">
+                        <JawaTengah />
+                    </Link>
+                    <Link
+                        to={`${isMobile ? '/choose' : '/yogjakarta/details'}`}
+                        aria-label='yogjakarta'
+                        onMouseEnter={() => onYogjakartaHoverHandler(true)}
+                        onMouseLeave={() => onYogjakartaHoverHandler(false)}
+                        className="ml-[1.5rem]">
+                        <Yogyakarta />
+                    </Link>
+                </div >
+            </div >
+            <Link
+                to={`${isMobile ? '/choose' : '/jawatimur/details'}`}
+                aria-label='jawatimur'
+            onMouseEnter = {() => onJawaTimurHoverHandler(true)}
+            onMouseLeave = {() => onJawaTimurHoverHandler(false)}
+className = "mt-[1.9rem]" >
+            <JawaTimur />
+        </Link >
+            </div >
+        </div >
     )
 }
 
