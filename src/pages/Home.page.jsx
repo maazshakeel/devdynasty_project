@@ -4,6 +4,7 @@ import Province from "../components/Province";
 import Welcome from "../components/Welcome";
 import Footer from "../components/Footer";
 import Slider from "../components/Slider";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 function HomePage() {
   let slides = [
@@ -19,7 +20,9 @@ function HomePage() {
         <Navbar />
       </header>
       <main>
-        <Welcome />
+        <LazyLoadComponent>
+          <Welcome />
+        </LazyLoadComponent>
         <div className="w-full flex flex-col justify-center gap-7 items-center mt-7">
           <Province />
           <p className="font-normal opacity-80">Klik Pulaunya Untuk Detail
