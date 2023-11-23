@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const BantenProvince = () => {
+const BantenProvince = (props) => {
   return (
-    <div>Bantent.province</div>
+    <div>
+      <Link to={'./details'}>Details</Link>
+    </div>
   )
 }
 

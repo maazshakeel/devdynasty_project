@@ -12,6 +12,7 @@ const JawaBarat = lazy(() => import("./pages/province/JawaBarat.province"))
 const JawaTimur = lazy(() => import("./pages/province/JawaTimur.province"))
 const JawaTengah = lazy(() => import("./pages/province/JawaTengah.province"))
 const Yogjakarta = lazy(() => import("./pages/province/Yogjakarta.province"))
+const ProvinceDetailsPage = lazy(() => import("./pages/ProvinceDetails.page"))
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/jawatengah" element={<JawaTengah />} />
           <Route path="/yogjakarta" element={<Yogjakarta />} />
           <Route path="/choose" element={<ChooseProvincePage />} />
+          <Route path="/:province/details" element={<ProvinceDetailsPage />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Suspense>
