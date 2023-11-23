@@ -5,18 +5,18 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 
 export default function ChooseProvinceSlide() {
 
-    const [index, setIndex] = useState(1)
+    const [index, setIndex] = useState(0)
 
     function handleNextClick() {
         if (index + 1 === dataProvince.length) {
-            setIndex(1)
+            setIndex(0)
         } else {
             setIndex(index + 1)
         }
     }
 
     function handlePreviousClick() {
-        if (index === 1) {
+        if (index === 0) {
             setIndex(dataProvince.length - 1)
         } else {
             setIndex(index - 1)
