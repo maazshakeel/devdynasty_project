@@ -96,6 +96,7 @@ const Province = () => {
             }} className="flex justify-center group transition-all">
                 <Link
                     to="/banten" className="mr-[-1rem] transition-all group-hover:mr-[0.5rem]"
+                    aria-label='banten'
                     onMouseEnter={() => onBantentHoverHandler(true)}
                     onMouseLeave={() => onBantentHoverHandler(false)}
 
@@ -105,6 +106,7 @@ const Province = () => {
                 <Link
                     to="/dkijakarta"
                     className="absolute start-[53px] top-[5px] transition-all group-hover:start-[60px] group-hover:scale-150"
+                    aria-label='dkijakarta'
                     onMouseEnter={() => onDkiJakartaHoverHandler(true)}
                     onMouseLeave={() => onDkiJakartaHoverHandler(false)}
                 >
@@ -112,6 +114,7 @@ const Province = () => {
                 </Link>
                 <Link
                     to="/jawabarat"
+                    aria-label='jawabarat'
                     onMouseEnter={() => onJawaBaratHoverHandler(true)}
                     onMouseLeave={() => onJawaBaratHoverHandler(false)}
                     className="mr-[-1rem] transition-all group-hover:mr-[0.5rem] group-hover:ml-[0.5rem]"
@@ -122,6 +125,7 @@ const Province = () => {
                     <div className="flex flex-col items-center">
                         <Link
                             to="/jawatengah"
+                            aria-label='jawatengah'
                             onMouseEnter={() => onJawaTengahHoverHandler(true)}
                             onMouseLeave={() => onJawaTengahHoverHandler(false)}
                             className="mb-[-1.5rem] transition-all group-hover:mb-[1px]">
@@ -129,6 +133,7 @@ const Province = () => {
                         </Link>
                         <Link
                             to="/yogjakarta"
+                            aria-label='yogjakarta'
                             onMouseEnter={() => onYogjakartaHoverHandler(true)}
                             onMouseLeave={() => onYogjakartaHoverHandler(false)}
                             className="ml-[1.5rem]">
@@ -138,6 +143,7 @@ const Province = () => {
                 </div>
                 <Link
                     to="/jawatimur"
+                    aria-label='jawatimur'
                     onMouseEnter={() => onJawaTimurHoverHandler(true)}
                     onMouseLeave={() => onJawaTimurHoverHandler(false)}
                     className="mt-[1.9rem]">
