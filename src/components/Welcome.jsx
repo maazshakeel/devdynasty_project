@@ -21,7 +21,7 @@ export default function Welcome() {
         //     </p>
         //     <div className="absolute top-0 left-0 w-full h-full opacity-70 shadow-gradient"></div>
         // </div>
-        <div className='w-full sm:flex sm:flex-row sm:item-stretch sm:h-[400px] lg:h-[600px]'>
+        <div className='w-full sm:flex sm:flex-row sm:item-stretch sm:h-[400px] lg:h-[600px] border-solid border-y-[1px]'>
             <div className="w-full h-[270px] bg-white font-poppins box-border px-[5%] pt-[44px] sm:w-[45%] sm:h-[100%] sm:pl-[5%] sm:pr-0 sm:flex sm:pt-0 sm:items-center">
                 <div className="">
                     <h1 className='font-semibold text-3xl w-[80%] mb-[11px] leading-[32.608px] md:text-4xl lg:text-[50px] lg:leading-none lg:w-full'>Welcome To MuseumJawa!</h1>
@@ -33,7 +33,9 @@ export default function Welcome() {
                 <LazyLoadImage
                     src={Image}
                     alt="Header Image"
+                    draggable='false'
                     className='w-full h-full object-cover object-center sm:img-shape sm:object-left lg:object-left'
+                    // width={'100%'} // Set your desired width
                 />
             </div>
         </div>
