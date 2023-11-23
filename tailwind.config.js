@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        default: ['Source Sans 3', 'sans-serif']
+        default: ['"Source Sans 3"', 'sans-serif']
       },
       animation: {
         bounce200: 'bounce 1s infinite 200ms',

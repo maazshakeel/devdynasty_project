@@ -19,7 +19,7 @@ function HomePage() {
       <header className="sticky top-0 z-50">
         <Navbar />
       </header>
-      <main>
+      <main className="font-default">
         <Welcome />
         <div className="w-full flex flex-col justify-center gap-7 items-center mt-4">
           {/* <div className="p-4 px-12 w-fit border-primary border-solid border-2 rounded-lg hover:bg-green-100/25">
