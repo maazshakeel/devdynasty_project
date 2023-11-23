@@ -2,25 +2,10 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Import the blur effect CSS
 
 import Image from '/src/assets/img/header_image.jpg';
-import PlaceholderImage from '/src/assets/img/header_image.png'; // Replace with your actual placeholder image path
+import PlaceholderImage from '/src/assets/img/header_image.jpg'; // Replace with your actual placeholder image path
 
 export default function Welcome() {
     return (
-        // <div className="relative w-full h-[250px]">
-        //     <LazyLoadImage
-        //         src={Image}
-        //         alt="Header Image"
-        //         className="w-full h-full object-cover object-center"
-        //         style={{ maxHeight: '250px', width: '100%', height: '250px' }}
-        //         width={'100%'} // Set your desired width
-        //         placeholderSrc={PlaceholderImage}
-        //         effect="blur"
-        //     />
-        //     <p className="absolute bottom-2 left-2 z-10 w-1/2 text-2xl sm:text-3xl md:text-4xl lg:text-4xl opacity-90 text-white font-semibold font-default">
-        //         Welcome To MuseumJawa!
-        //     </p>
-        //     <div className="absolute top-0 left-0 w-full h-full opacity-70 shadow-gradient"></div>
-        // </div>
         <div className='w-full sm:flex sm:flex-row sm:item-stretch sm:h-[400px] lg:h-[600px] border-solid border-y-[1px]'>
             <div className="w-full h-[270px] bg-white font-poppins box-border px-[5%] pt-[44px] sm:w-[45%] sm:h-[100%] sm:pl-[5%] sm:pr-0 sm:flex sm:pt-0 sm:items-center">
                 <div className="">
@@ -34,8 +19,12 @@ export default function Welcome() {
                     src={Image}
                     alt="Header Image"
                     draggable='false'
+                    rel='preload'
+                    placeholderSrc={PlaceholderImage}
+                    width={"100%"}
+                    height={'100%'}
+                    effect='blur'
                     className='w-full h-full object-cover object-center sm:img-shape sm:object-left lg:object-left'
-                    // width={'100%'} // Set your desired width
                 />
             </div>
         </div>
