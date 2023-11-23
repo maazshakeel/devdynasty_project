@@ -2,6 +2,7 @@ import "./App.css";
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
+import ChooseProvincePage from "./pages/ChooseProvince.page.mobile";
 
 const HomePage = lazy(() => import("./pages/Home.page"));
 const NoPage = lazy(() => import("./pages/NoPage.page"));
@@ -27,6 +28,7 @@ function App() {
           <Route path="/jawatimur" element={<JawaTimur />} />
           <Route path="/jawatengah" element={<JawaTengah />} />
           <Route path="/yogjakarta" element={<Yogjakarta />} />
+          <Route path="/choose" element={<ChooseProvincePage />} />
           <Route path="/:province/details" element={<ProvinceDetailsPage />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
