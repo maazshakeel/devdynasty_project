@@ -22,13 +22,6 @@ function NoPage() {
                             className="px-6 py-2 text-sm font-semibold text-green-800 bg-green-100"
                         >Go home</a>
                     </div>
-                    <div className="">
-                        <img
-                            src="https://i.imgur.com/CsCgN7Ll.png"
-                            alt="img"
-                            className="object-cover w-full h-4/5 "
-                        />
-                    </div>
                 </div>
             </div>
         </div>
