@@ -1,7 +1,7 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Import the blur effect CSS
 
-import Image from '/src/assets/img/header_image.png';
+import Image from '/src/assets/img/header_image.jpg';
 import PlaceholderImage from '/src/assets/img/header_image.png'; // Replace with your actual placeholder image path
 
 export default function Welcome() {
