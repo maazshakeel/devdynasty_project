@@ -4,17 +4,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        default: ['"Source Sans 3"', 'sans-serif'],
-        poppins: ['Poppins' , 'sans-serif']
+        default: ['"Chakra Petch"', "sans-serif"],
+        poppins: ['"Chakra Petch"', "sans-serif"],
       },
       animation: {
-        bounce200: 'bounce 1s infinite 200ms',
-        bounce400: 'bounce 1s infinite 400ms',
+        bounce200: "bounce 1s infinte 200ms",
+        bounce400: "bounce 1s infinite 400ms",
       },
       colors: {
         primary: "#03AC0E",
-        gray: "#F3EEEF"
-      }
+        gray: "#F3EEEF",
+      },
     },
   },
   plugins: [],
