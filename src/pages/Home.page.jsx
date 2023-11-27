@@ -8,10 +8,12 @@ import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 function HomePage() {
   let slides = [
-    "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-    "https://wallpapercave.com/wp/wp3386769.jpg",
-    "https://source.unsplash.com/755x480?mountain",
-    "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
+    "/img/previewBanten.png",
+    "/img/previewJakarta.png",
+    "/img/previewJawaBarat.png",
+    "/img/previewJawaTengah.png",
+    "/img/previewYogyakarta.png",
+    "/img/previewJawaTimur.png",
   ];
 
   return (
