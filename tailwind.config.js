@@ -8,7 +8,7 @@ export default {
         poppins: ['"Chakra Petch"', "sans-serif"],
       },
       animation: {
-        bounce200: "bounce 1s infinite 200ms",
+        bounce200: "bounce 1s infinte 200ms",
         bounce400: "bounce 1s infinite 400ms",
       },
       colors: {
