@@ -26,7 +26,7 @@ export default function Slider({ slides }) {
                 ))}
             </div>
 
-            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white text-3xl px-4 sm:px-6 ">
+            <div className="absolute bottom-3 h-full w-full justify-between items-center flex text-white text-3xl px-4 sm:px-6 ">
                 <button onClick={previousSlide} aria-label="Previous Slide">
                     <FaChevronLeft />
                 </button>
@@ -35,14 +35,14 @@ export default function Slider({ slides }) {
                 </button>
             </div>
 
-            <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
+            <div className="absolute bottom-0 py-3 lg:py-6 flex justify-center gap-2 lg:gap-3 w-full">
                 {slides.map((s, i) => (
                     <div
                         onClick={() => {
                             setCurrent(i);
                         }}
                         key={"circle" + i}
-                        className={`rounded-full w-2 h-2 cursor-pointer  ${i === current ? "bg-white" : "bg-slate-500"
+                        className={`rounded-full w-1 h-1 lg:w-2 lg:h-2 cursor-pointer  ${i === current ? "bg-white" : "bg-slate-500"
                             }`}
                         role="button"
                         aria-label={`Go to Slide ${i + 1}`}
