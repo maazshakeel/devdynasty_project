@@ -26,7 +26,7 @@ const dataProvince = [
     {
         name: "DI Yogyakarta",
         img: "/img/5.png",
-        desc: "Yogyakarta dikenal sebagai pusat kebudayaan dan pendidikan dengan keberlanjutan tradisi kraton (istana) dan seni tradisional. Tempat ini juga terkenal dengan destinasi pariwisatanya, termasuk Candi Borobudur dan Candi Prambanan.",
+        desc: "Yogyakarta, provinsi di Pulau Jawa, Indonesia, terkenal sebagai pusat kebudayaan dengan istana keraton, seni tradisional, dan kekayaan sejarah. Dikenal dengan julukan Jogja, provinsi ini menciptakan pengalaman budaya yang unik bagi pengunjung.",
         link: "/yogyakarta/details"
     },
     {
