@@ -157,7 +157,7 @@ const Province = () => {
               aria-label="jawatengah"
               onMouseEnter={() => onJawaTengahHoverHandler(true)}
               onMouseLeave={() => onJawaTengahHoverHandler(false)}
-              className="mb-[-1.5rem] transition-all lg:group-hover:mb-[1px]"
+              className="mb-[-1.6rem] transition-all lg:group-hover:mb-[1px]"
             >
               <JawaTengah />
             </Link>
@@ -166,7 +166,7 @@ const Province = () => {
               aria-label="yogjakarta"
               onMouseEnter={() => onYogjakartaHoverHandler(true)}
               onMouseLeave={() => onYogjakartaHoverHandler(false)}
-              className="ml-[1.5rem]"
+              className="ml-[1.6rem] z-10"
             >
               <Yogyakarta />
             </Link>
