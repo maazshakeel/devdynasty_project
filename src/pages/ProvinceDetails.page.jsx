@@ -2,10 +2,31 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { useParams } from "react-router-dom";
 import { FaInfoCircle } from "react-icons/fa";
+import DetailCard from "../components/DetailCard";
 
 const ProvinceDetailsPage = (props) => {
   const { province } = useParams();
   const modifiedProvince = province.charAt(0).toUpperCase() + province.slice(1);
+  const testJSON = [
+    {
+      title: 'Baju Pangsi',
+      subtitle: 'Baju Adat Dki Jakarta',
+      description: 'Pangsi Betawi adalah pakaian adat Betawi pria yang terdiri dari baju tikim dan celana pangsi.',
+      img: 'https://asset.kompas.com/crops/kuaDEQ1XCaWY_YIRQoRqnnOQ6yw=/73x0:735x441/750x500/data/photo/2021/03/16/605092498232a.png',
+    },
+    {
+      title: 'Baju Andada',
+      subtitle: 'Baju Adadadada',
+      description: 'Pangsi Betawi adalah pakaian adat Betawi pria yang terdiri dari baju tikim dan celana pangsi.',
+      img:'https://source.unsplash.com/484x332?indonesian%20culture'
+    },
+    {
+      title: 'Baju fafs',
+      subtitle: 'Baju fafafa',
+      description: 'Pangsi Betawi adalah pakaian adat Betawi pria yang terdiri dari baju tikim dan celana pangsi.',
+      img:'https://images.unsplash.com/photo-1667132713857-6c3369c06f7f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=332&ixid=MnwxfDB8MXxyYW5kb218MHx8aW5kb25lc2lhbiBjdWx0dXJlfHx8fHx8MTcwMTMyNDg3Mg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=484'
+    },
+  ]
   return (
     <div className=" bg-[#E8F0C1] h-screen">
       <header>
@@ -30,41 +51,10 @@ const ProvinceDetailsPage = (props) => {
             </div>
           </div>
 
-          <div className="w-[100vw] mt-10 mx-auto bg-red-50 p-2 font-poppins sm:flex sm:gap-2 sm:flex-nowrap sm:items-start sm:overflow-x-auto md:flex-wrap md:justify-center">
-            <div className="w-full bg-white shadow-md rounded-lg overflow-hidden mb-3 sm:w-[400px] sm:shrink-0">
-              <div className="w-full h-[180px] bg-slate-200 overflow-hidden">
-                <img src="https://asset.kompas.com/crops/kuaDEQ1XCaWY_YIRQoRqnnOQ6yw=/73x0:735x441/750x500/data/photo/2021/03/16/605092498232a.png" alt="" width={"auto"} height={"auto"}/>
-              </div>
-              <div className="p-5">
-              <h1 className="text-3xl font-bold">Baju Pangsi</h1>
-              <p className="text-slate-300 mb-5">Baju Adat DKI Jakarta</p>
-              
-              <p>Baju adat pria Banten disebut dengan baju pangsi. Baju pangsi terdiri dari celana pangsi, baju pangsi, dan ikat kepala. <br /> <a href="#" className="font-bold ">Read More</a></p>
-              </div>
-            </div>
-            <div className="w-full bg-white shadow-md rounded-lg overflow-hidden mb-3 sm:w-[400px] sm:shrink-0">
-              <div className="w-full h-[180px] bg-slate-200 overflow-hidden">
-                <img src="https://asset.kompas.com/crops/kuaDEQ1XCaWY_YIRQoRqnnOQ6yw=/73x0:735x441/750x500/data/photo/2021/03/16/605092498232a.png" alt="" width={"auto"} height={"auto"}/>
-              </div>
-              <div className="p-5">
-              <h1 className="text-3xl font-bold">Baju Pangsi</h1>
-              <p className="text-slate-300 mb-5">Baju Adat DKI Jakarta</p>
-              
-              <p>Baju adat pria Banten disebut dengan baju pangsi. Baju pangsi terdiri dari celana pangsi, baju pangsi, dan ikat kepala. <br /> <a href="#" className="font-bold ">Read More</a></p>
-              </div>
-            </div>
-            <div className="w-full bg-white shadow-md rounded-lg overflow-hidden mb-3 sm:w-[400px] sm:shrink-0">
-              <div className="w-full h-[180px] bg-slate-200 overflow-hidden">
-                <img src="https://asset.kompas.com/crops/kuaDEQ1XCaWY_YIRQoRqnnOQ6yw=/73x0:735x441/750x500/data/photo/2021/03/16/605092498232a.png" alt="" width={"auto"} height={"auto"}/>
-              </div>
-              <div className="p-5">
-              <h1 className="text-3xl font-bold">Baju Pangsi</h1>
-              <p className="text-slate-300 mb-5">Baju Adat DKI Jakarta</p>
-              
-              <p>Baju adat pria Banten disebut dengan baju pangsi. Baju pangsi terdiri dari celana pangsi, baju pangsi, dan ikat kepala. <br /> <a href="#" className="font-bold ">Read More</a></p>
-              </div>
-            </div>
-            
+          <div className="w-[100vw] mt-10 mx-auto bg-red-50 p-2 font-poppins 
+          sm:flex sm:gap-2 sm:flex-nowrap sm:items-start sm:overflow-x-auto 
+          md:flex-wrap md:justify-center md:gap-4">
+            {testJSON.map(object => (<DetailCard key={object.name} object={object}/>))}
           </div>
         </div>
       </main>
