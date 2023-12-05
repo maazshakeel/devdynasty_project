@@ -1,11 +1,11 @@
-export default function detailCard({object}) {
+export default function detailCard({object , setIsOpenHandlerTrue}) {
   return (
     <div className="w-full bg-white shadow-md rounded-lg overflow-hidden mb-3 sm:w-[400px] sm:shrink-0">
       <div className="w-full h-[180px] bg-slate-200 overflow-hidden">
         <img
           src={object.img}
           alt=""
-          width={"auto"}
+          width={"100%"}
           height={"auto"}
         />
       </div>
@@ -14,8 +14,8 @@ export default function detailCard({object}) {
         <p className="text-slate-300 mb-5">{object.subtitle}</p>
 
         <p>
-            {object.description} <br />{" "}
-          <a href="#" className="font-bold ">
+            {object.description} <br />
+          <a href="#" className="font-bold " onClick={()=>{setIsOpenHandlerTrue()}}>
             Read More
           </a>
         </p>
