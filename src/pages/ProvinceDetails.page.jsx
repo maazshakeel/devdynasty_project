@@ -4,19 +4,12 @@ import { useParams } from "react-router-dom";
 import { FaInfoCircle } from "react-icons/fa";
 import DetailCard from "../components/DetailCard";
 import ModalProvince from "../components/ModalProvince";
+import { useAppContext } from "../context/AppContext";
 
 const ProvinceDetailsPage = (props) => {
   const { province } = useParams();
   const modifiedProvince = province.charAt(0).toUpperCase() + province.slice(1);
-  const [isOpen, setIsOpen] = useState(false);
-
-  function setIsOpenHandlerTrue() {
-    setIsOpen(true);
-  }
-
-  function setIsOpenHandlerFalse() {
-    setIsOpen(false);
-  }
+  const { isOpen } = useAppContext();
 
   const testJSON = [
     {
@@ -42,11 +35,16 @@ const ProvinceDetailsPage = (props) => {
     },
   ];
   return (
-    <div className=" bg-[#E8F0C1] h-screen">
+    <div
+      style={{
+        backgroundColor: isOpen && "#999999",
+      }}
+      className="bg-[#E8F0C1] min-h-screen"
+    >
       <header>
         <Navbar />
       </header>
-      <main className="font-default ">
+      <main className="font-default">
         <div className="w-full">
           <div className="w-full flex justify-center items-center mt-2 flex-col">
             <div className="p-4 px-12 w-fit transition-all">
@@ -65,23 +63,19 @@ const ProvinceDetailsPage = (props) => {
           </div>
 
           <div
+            style={{
+              backgroundColor: isOpen && "#999999",
+            }}
             className="w-full mt-10 mx-auto bg-[#E8F0C1] p-2 font-poppins 
           sm:flex sm:gap-2 sm:flex-nowrap sm:items-start sm:overflow-x-auto 
           md:flex-wrap md:justify-center md:gap-4"
           >
-            {testJSON.map((object) => (
-              <DetailCard
-                key={object.name}
-                object={object}
-                setIsOpenHandlerTrue={setIsOpenHandlerTrue}
-              />
+            {testJSON.map((object, i) => (
+              <DetailCard key={i} object={object} />
             ))}
           </div>
 
-          <ModalProvince
-            isOpen={isOpen}
-            setIsOpenHandlerFalse={setIsOpenHandlerFalse}
-          />
+          <ModalProvince />
         </div>
       </main>
     </div>
