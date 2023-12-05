@@ -1,18 +1,8 @@
 import { useCallback, useState } from "react";
+import throttle from "../../lib/throttle";
+import { useAppContext } from "../context/AppContext";
 
-function throttle(func, delay) {
-  let lastCall = 0;
-  return (...args) => {
-    const now = new Date().getTime();
-    if (now - lastCall < delay) {
-      return;
-    }
-    lastCall = now;
-    return func(...args);
-  };
-}
-
-export default function detailCard({ object, setIsOpenHandlerTrue }) {
+export default function detailCard({ object }) {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
 
   const onMouseMove = useCallback(
@@ -33,6 +23,8 @@ export default function detailCard({ object, setIsOpenHandlerTrue }) {
   const onMouseLeave = () => {
     setRotate({ x: 0, y: 0 });
   };
+
+  const { isOpen, setIsOpen } = useAppContext();
   return (
     <div
       className={`w-full  bg-[#E8F0C1] border-solid border-2 drop-shadow-md shadow-inner rounded-lg overflow-hidden mb-3 sm:w-[400px] sm:shrink-0`}
@@ -40,6 +32,8 @@ export default function detailCard({ object, setIsOpenHandlerTrue }) {
       onMouseLeave={onMouseLeave}
       style={{
         transform: `perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(1, 1, 1)`,
+
+        backgroundColor: isOpen && "#999999",
         transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
       }}
     >
@@ -54,9 +48,7 @@ export default function detailCard({ object, setIsOpenHandlerTrue }) {
           {object.description} <br />
           <span
             className="font-bold text-green-800 "
-            onClick={() => {
-              setIsOpenHandlerTrue();
-            }}
+            onClick={() => setIsOpen(true)}
           >
             Read More
           </span>
