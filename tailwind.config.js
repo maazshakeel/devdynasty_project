@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         default: ['"Chakra Petch"', "sans-serif"],
-        poppins: ['"Chakra Petch"', "sans-serif"],
+        poppins: ['"Poppins"', "sans-serif"],
       },
       animation: {
         bounce200: "bounce 1s infinte 200ms",
