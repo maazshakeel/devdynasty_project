@@ -6,6 +6,7 @@ import DetailCard from "../components/DetailCard";
 import ModalProvince from "../components/ModalProvince";
 import { useAppContext } from "../context/AppContext";
 import dataCultures from "../data/dataCultures";
+import FilterCultureButtons from "../components/FilterCultureButtons";
 
 const ProvinceDetailsPage = (props) => {
   const { province } = useParams();
@@ -23,6 +24,20 @@ const ProvinceDetailsPage = (props) => {
     ...dataProvinceCulture[0].alatMusikDanTariTradisional.tariTradisional,
     ...dataProvinceCulture[0].tempatBersejarah,
   ];
+
+  const [filteredData, setFilteredData] = useState(allData)
+  const [active, setActive] = useState(1)
+
+  const handleFilterData = (category) => {
+    if (category !== "All") {
+      setFilteredData(allData.filter((data) => {
+        return data.category.includes(category)
+      }))
+    } else {
+      setFilteredData(allData)
+    }
+    console.log(filteredData)
+  }
 
   return (
     <div
@@ -43,13 +58,15 @@ const ProvinceDetailsPage = (props) => {
                 <span className="text-primary">of {modifiedProvince}</span>
               </h1>
             </div>
-            <div className="mt-[3px] bg-green-100/25 p-2 border-solid border-2 border-green-200 max-w-xs rounded-md sm:max-w-xl flex gap-1">
+            <div className="mt-[3px] bg-green-100/25 p-2 border-solid border-2 border-green-200 w-fit rounded-md flex gap-1">
               <FaInfoCircle color="rgb(22 101 52)" />
-              <p className="font-medium text-xs sm:text-sm  opacity-80 text-start">
-                Lihat semua budaya {modifiedProvince} mulai dari Seni, Arsitektur, sampai
-                Destinasi Wisata!
+              <p className="font-medium text-xs sm:text-sm opacity-80 text-start">
+                Lihat semua budaya {modifiedProvince} mulai dari Seni, Arsitektur, sampai Tempat Bersejarah!
               </p>
             </div>
+
+            <FilterCultureButtons filterData={handleFilterData} />
+
           </div>
 
           <div
@@ -60,7 +77,7 @@ const ProvinceDetailsPage = (props) => {
           sm:flex sm:gap-2 sm:flex-nowrap sm:items-start sm:overflow-x-auto 
           md:flex-wrap md:justify-center md:gap-4 "
           >
-            {allData.map((object, i) => (
+            {filteredData.map((object, i) => (
               <DetailCard key={i} object={object} />
             ))}
 
