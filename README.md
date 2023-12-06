@@ -1,14 +1,8 @@
-# DevDynasty - UI
+#  MuseumJava
+![thumbnail](https://github.com/maazshakeel/devdynasty_project/assets/62890173/c1bc1e05-015e-43e5-80a9-10882ee660a7)
 
-![Thumbnail](./doc/thumbnail.png)
-
-## Features (for now)
-
-1. Register a user
-2. Get current user
-3. Login
-4. Access token
-5. Refresh tokens
+## What is MuseumJava?
+MuseumJava is a website where you can explore and learn about indonesian island: Java culture, With a very beautiful and highly interacity user experience.
 
 ## Project structure
 
@@ -25,42 +19,30 @@ $PROJECT_ROOT
 
 ## Stack
 
-- [TypeScript](https://www.typescriptlang.org/) - Static tye checking
-- [Express@5](https://expressjs.com/en/5x/api.html) - Web server
-- [argon2](https://github.com/ranisalt/node-argon2#readme) - Password hashing
-- [Zod](https://github.com/colinhacks/zod) - Validation
-- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) - Signing and verifying JSON web tokens
-- [Nodemailer](https://nodemailer.com/about/) - Sending emails
-- [Pino](https://github.com/pinojs/pino) - Logging
-- [config](https://github.com/lorenwest/node-config) - Managing configuration
-
-## Using
-
-- [Postman](https://www.postman.com/downloads/)
-- [Node.js](https://nodejs.org/en/)
-- [Prisma](https://www.prisma.io/)
-- [Swagger](https://www.swagger.io/)
+- [JavaScript](https://nodejs.org/) - Main programming language
+- [React.js](https://react.dev/) - A library for web
+- [TailwindCSS](https://nodemailer.com/) - A utility-first CSS framework
 
 ## TODOs
 
-- [x] Bootstrap application
-- [ ] User API
-  - [ ] Create user
-  - [ ] Get current user
-- [ ] Authentication API
-  - [ ] Create user session
-  - [ ] Get new access token with refresh tokens
+- [X] Hero Section
+- [X] Show interactive province with hover effect
+- [X] Image slider for provinces description
+- [X] Accordian
+- [X] Choose Province for mobile (only mobile)
+- [X] DataCard to display data about the culture
+- [X] Modal to explore further about that DataCard
+- [X] Filter component to filter out the cultural categories, i.e: Art....
+- [ ] 3D Island
+- [ ] Clean some of the things
+- [ ] Make it fast
 
 ## List Of Components
-- [ ] Navbar
-  - [ ] Back Buttons
-- [ ] About Accordion 
-- [ ] Slider
-- [ ] Right & Left Buttons
-- [ ] Title For Island
-- [ ] Island
-- [ ] Island desc
-- [ ] Categories Button
-- [ ] Card (For Showing Item)
-
-atoptest
+- [X] Navbar
+- [X] About Accordion 
+- [X] Slider
+- [X] Right & Left Buttons
+- [X] Title For Island
+- [X] Island
+- [X] Categories Button
+- [X] Card (to display data)
