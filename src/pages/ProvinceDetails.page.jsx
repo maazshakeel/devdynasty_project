@@ -13,7 +13,9 @@ const ProvinceDetailsPage = (props) => {
   const modifiedProvince = province.charAt(0).toUpperCase() + province.slice(1);
   const { isOpen } = useAppContext();
 
-  const dataProvinceCulture = dataCultures.filter((data) => data.province == modifiedProvince)
+  const dataProvinceCulture = dataCultures.filter(
+    (data) => data.province == modifiedProvince,
+  );
 
   const allData = [
     ...dataProvinceCulture[0].seniTradisional.bajuAdat,
@@ -25,19 +27,20 @@ const ProvinceDetailsPage = (props) => {
     ...dataProvinceCulture[0].tempatBersejarah,
   ];
 
-  const [filteredData, setFilteredData] = useState(allData)
-  const [active, setActive] = useState(1)
+  const [filteredData, setFilteredData] = useState(allData);
 
   const handleFilterData = (category) => {
     if (category !== "All") {
-      setFilteredData(allData.filter((data) => {
-        return data.category.includes(category)
-      }))
+      setFilteredData(
+        allData.filter((data) => {
+          return data.category.includes(category);
+        }),
+      );
     } else {
-      setFilteredData(allData)
+      setFilteredData(allData);
     }
-    console.log(filteredData)
-  }
+    console.log(filteredData);
+  };
 
   return (
     <div
@@ -61,12 +64,12 @@ const ProvinceDetailsPage = (props) => {
             <div className="mt-[3px] bg-green-100/25 p-2 border-solid border-2 border-green-200 w-fit rounded-md flex gap-1">
               <FaInfoCircle color="rgb(22 101 52)" />
               <p className="font-medium text-xs sm:text-sm opacity-80 text-start">
-                Lihat semua budaya {modifiedProvince} mulai dari Seni, Arsitektur, sampai Tempat Bersejarah!
+                Lihat semua budaya {modifiedProvince} mulai dari Seni,
+                Arsitektur, sampai Tempat Bersejarah!
               </p>
             </div>
 
             <FilterCultureButtons filterData={handleFilterData} />
-
           </div>
 
           <div
@@ -78,9 +81,10 @@ const ProvinceDetailsPage = (props) => {
           md:flex-wrap md:justify-center md:gap-4 "
           >
             {filteredData.map((object, i) => (
-              <DetailCard key={i} object={object} />
+              <div>
+                <DetailCard key={i} object={object} />
+              </div>
             ))}
-
           </div>
 
           <ModalProvince />
