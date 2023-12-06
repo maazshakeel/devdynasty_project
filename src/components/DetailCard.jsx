@@ -40,19 +40,19 @@ export default function detailCard({ object }) {
       <div className="w-full h-[180px] bg-slate-200 overflow-hidden border-b-2">
         <img src={object.img} alt="" width={"100%"} height={"auto"} />
       </div>
-      <div className="p-5">
+      <div className="p-5 overflow-hidden ">
         <h1 className="text-3xl font-bold">{object.title}</h1>
         <p className="text-slate-900 mb-5">{object.subtitle}</p>
 
-        <p>
-          {object.description} <br />
-          <span
-            className="font-bold text-green-800 "
-            onClick={() => setIsOpen(true)}
-          >
-            Read More
-          </span>
-        </p>
+        <p className="h-20 ">{object.desc}  </p>
+      </div>
+      <div
+        className="font-bold w-fit px-5 py-2 text-green-800"
+        onClick={() => setIsOpen(true)}
+      >
+        <span>
+          Read More
+        </span>
       </div>
     </div>
   );
