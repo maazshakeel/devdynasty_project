@@ -4,17 +4,13 @@ const FilterCultureButtons = ({ filterData }) => {
     const [active, setActive] = useState(1);
     const [expand, setExpand] = useState(false);
 
-    const [filterText, setFilterText] = useState("No Filter")
+    const [filterText, setFilterText] = useState("All")
 
     const handleFilterButtonClick = (filter, index) => {
         filterData(filter)
         setActive(index)
         setExpand(!expand)
-        if (filter === "All") {
-            setFilterText("No Filter")
-        } else {
-            setFilterText(filter)
-        }
+        setFilterText(filter)
     }
 
     return (
@@ -59,7 +55,7 @@ const FilterCultureButtons = ({ filterData }) => {
                     className={`rounded-full hover:bg-gray transition hover:font-semibold py-4 px-10 bg-gray font-semibold`}
                     onClick={() => setExpand(!expand)}
                 >
-                    Filter ({filterText})
+                    {filterText}
                 </button>
                 {
                     expand && (
