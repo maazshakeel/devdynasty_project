@@ -26,10 +26,10 @@ const FilterCultureButtons = ({ filterData }) => {
 
   return (
     <>
-      <div className="mt-5 hidden lg:rounded-full rounded-3xl border-solid border-2 lg:flex flex-row flex-wrap gap-4 p-2 font-medium">
+      <div className="mt-5 bg-white hidden lg:rounded-full rounded-3xl border-solid border-2 lg:flex flex-row flex-wrap gap-4 p-2 font-medium">
         <button
           className={`rounded-full ${
-            active !== 1 && "hover:bg-slate-50/60"
+            active !== 1 && "hover:bg-slate-100"
           } transition hover:font-semibold py-4 px-10 ${
             active === 1
               ? "bg-black text-white font-semibold hover:bg-black"
@@ -41,7 +41,7 @@ const FilterCultureButtons = ({ filterData }) => {
         </button>
         <button
           className={`rounded-full ${
-            active !== 2 && "hover:bg-slate-50/60"
+            active !== 2 && "hover:bg-slate-100"
           } transition hover:font-semibold py-4 px-10 ${
             active === 2
               ? "bg-black text-white font-semibold hover:bg-black"
@@ -53,7 +53,7 @@ const FilterCultureButtons = ({ filterData }) => {
         </button>
         <button
           className={`rounded-full ${
-            active !== 3 && "hover:bg-slate-50/60"
+            active !== 3 && "hover:bg-slate-100"
           } transition hover:font-semibold py-4 px-10 ${
             active === 3
               ? "bg-black text-white font-semibold hover:bg-black"
@@ -65,7 +65,7 @@ const FilterCultureButtons = ({ filterData }) => {
         </button>
         <button
           className={`rounded-full ${
-            active !== 4 && "hover:bg-slate-50/60"
+            active !== 4 && "hover:bg-slate-100"
           } transition hover:font-semibold py-4 px-10 ${
             active === 4
               ? "bg-black text-white font-semibold hover:bg-black"
@@ -79,7 +79,7 @@ const FilterCultureButtons = ({ filterData }) => {
         </button>
         <button
           className={`rounded-full ${
-            active !== 5 && "hover:bg-slate-50/60"
+            active !== 5 && "hover:bg-slate-100"
           } transition hover:font-semibold py-4 px-10 ${
             active === 5
               ? "bg-black text-white font-semibold hover:bg-black"

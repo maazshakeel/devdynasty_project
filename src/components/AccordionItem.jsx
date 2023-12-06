@@ -16,7 +16,7 @@ export default function AccordionItem({ title, content }) {
   return (
     <div
       onClick={toggleClick}
-      className="border border-[#B6C2E2] rounded-lg px-5 py-2 font-default sm:w-[75%] sm:self-center md:w-[60%]"
+      className="border bg-white border-[#B6C2E2] rounded-lg px-5 py-2 font-default sm:w-[75%] sm:self-center md:w-[60%]"
     >
       <div className="flex justify-between">
         <h2 id={headingId} className="acc font-semibold text-lg md:text-xl">

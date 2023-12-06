@@ -25,12 +25,12 @@ export default function detailCard({ object }) {
   };
 
   const colors = [
-    "bg-[#ff5d5d] text-black",
-    "bg-[#fff503] text-black",
-    "bg-[#ffb443] text-black",
-    "bg-[#dd7dff] text-black",
+    // "bg-[#ff5d5d] text-black",
+    // "bg-[#fff503] text-black",
+    // "bg-[#ffb443] text-black",
+    // "bg-[#dd7dff] text-black",
     "bg-[#000000] text-white",
-    "bg-[#00ff75] text-black",
+    // "bg-[#00ff75] text-black",
   ];
 
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -38,7 +38,7 @@ export default function detailCard({ object }) {
   const { isOpen, setIsOpen } = useAppContext();
   return (
     <div
-      className={`w-full font-default z-0 bg-[#E8F0C1] border-solid border-2 drop-shadow-md shadow-inner rounded-lg overflow-hidden mb-3 sm:w-[400px] sm:shrink-0`}
+      className={`w-full font-default z-0 bg-white border-solid border-2 drop-shadow-md shadow-inner rounded-lg overflow-hidden mb-3 sm:w-[400px] sm:shrink-0`}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
       style={{
