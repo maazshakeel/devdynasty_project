@@ -23,6 +23,17 @@ $PROJECT_ROOT
 - [React.js](https://react.dev/) - A library for web
 - [TailwindCSS](https://nodemailer.com/) - A utility-first CSS framework
 
+## How to dev?
+1. `git clone https://github.com/maazshakeel/devdynasty_project.git`
+2. `cd devdynasty_project`
+3. `npm i` or `yarn`
+4. and simply run `npm run dev` or `yarn`
+
+## Contributing Guide
+1. Make a new branch for every feature you want to add.
+2. For example if you want to work on issue number #3, your branch name should be like this: `#3_......`
+3. Commit the changes, push, and make the pull request with the details
+
 ## TODOs
 
 - [X] Hero Section
