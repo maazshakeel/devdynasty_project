@@ -65,7 +65,7 @@ export default function ModalProvince() {
       {isOpen && (
         <div
           style={{
-            height: "90vh",
+            height: "70vh",
             opacity: "0.97",
           }}
           className={`w-full overflow-y-scroll h-[0vh]  z-50 bg-[#E8F0C1] border-2 fixed bottom-0 rounded-tr-3xl rounded-tl-2xl font-default`}
@@ -80,7 +80,7 @@ export default function ModalProvince() {
             <span>X</span>
           </div>
 
-          <div className="p-28">
+          <div className="p-28 md:ml-24">
             <div className="flex mb-5 items-center gap-5">
               <img
                 src={modalData.img}
