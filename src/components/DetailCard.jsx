@@ -35,7 +35,7 @@ export default function detailCard({ object }) {
 
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-  const { isOpen, setIsOpen } = useAppContext();
+  const { isOpen, setIsOpen, modalData, setModalData } = useAppContext();
   return (
     <div
       className={`w-full font-default z-0 bg-white border-solid border-2 drop-shadow-md shadow-inner rounded-lg overflow-hidden mb-3 sm:w-[400px] sm:shrink-0`}
@@ -64,11 +64,14 @@ export default function detailCard({ object }) {
       </div>
       <div
         className="font-bold w-fit px-5 py-2 text-green-800"
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+          setModalData(object);
+          setIsOpen(true);
+        }}
       >
-        <div class="p-0 pb-3 pt-1">
+        <div className="p-0 pb-3 pt-1">
           <button
-            class={`${randomColor} select-none font-sans font-bold uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none duration-1000`}
+            className={`${randomColor} select-none font-sans font-bold uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none duration-1000`}
             type="button"
           >
             Read More
