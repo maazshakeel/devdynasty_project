@@ -75,7 +75,7 @@ export default function ModalProvince() {
               setModalData(null);
               setIsOpen(false);
             }}
-            className="absolute right-5 top-5 text-2xl font-extrabold border-solid border-2 rounded-full h-10 w-10 text-center bg-slate-700 text-white flex items-center justify-center hover:cursor-pointer"
+            className="fixed right-5 mt-5 text-2xl font-extrabold border-solid border-2 rounded-full h-10 w-10 text-center bg-slate-700 text-white flex items-center justify-center hover:cursor-pointer"
           >
             <span>X</span>
           </div>
