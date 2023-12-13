@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
 
@@ -12,6 +12,15 @@ export default function Slider({ slides }) {
   const nextSlide = () => {
     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
+  useEffect(() => {
+    // Auto slide functionality
+    const intervalId = setInterval(() => {
+      nextSlide();
+    }, 3000); // Adjust the interval duration as needed (3000 milliseconds = 3 seconds)
+
+    // Clear interval on component unmount to avoid memory leaks
+    return () => clearInterval(intervalId);
+  }, [current]); // Re-run effect when the current slide changes
 
   return (
     <div className="overflow-hidden relative rounded-md">

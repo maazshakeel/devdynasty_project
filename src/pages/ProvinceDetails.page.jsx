@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { useParams } from "react-router-dom";
 import { FaInfoCircle } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { useAppContext } from "../context/AppContext";
 import dataCultures from "../data/dataCultures";
 import FilterCultureButtons from "../components/FilterCultureButtons";
 
-const ProvinceDetailsPage = (props) => {
+const ProvinceDetailsPage = () => {
   const { province } = useParams();
   const modifiedProvince = province.charAt(0).toUpperCase() + province.slice(1);
   const { isOpen } = useAppContext();
@@ -81,8 +81,8 @@ const ProvinceDetailsPage = (props) => {
           md:flex-wrap md:justify-center md:gap-4 "
           >
             {filteredData.map((object, i) => (
-              <div>
-                <DetailCard key={i} object={object} />
+              <div key={i}>
+                <DetailCard object={object} />
               </div>
             ))}
           </div>
