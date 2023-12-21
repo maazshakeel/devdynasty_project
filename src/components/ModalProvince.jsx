@@ -23,16 +23,15 @@ export default function ModalProvince() {
             <span>X</span>
           </div>
 
-          <div className="p-28 md:ml-24">
-            <div className="flex mb-5 items-center gap-5">
+          <div className="p-20  md:p-28 md:ml-24">
+            <div className="flex mb-5 flex-col md:flex-row md:gap-5 md:items-center">
               <img
                 src={modalData.img}
                 alt="tradition-image"
-                width={"15%"}
-                className="rounded-lg"
+                className="rounded-lg md:w-[20%]"
               />
 
-              <div className="flex flex-col justify-between gap-2">
+              <div className="flex flex-col justify-between gap-2 mt-2">
                 <h2 className="text-3xl font-bold mb-4">{modalData.title}</h2>
                 <h3 className="text-2xl font-semibold text-slate-600">
                   {modalData.subtitle}
@@ -40,7 +39,7 @@ export default function ModalProvince() {
               </div>
             </div>
 
-            <p className="text-gray-700 text-xl font-medium w-3/4">
+            <p className="text-gray-700 text-xl font-medium w-full md:w-3/4">
               {modalData.desc}
             </p>
           </div>
