@@ -4,6 +4,8 @@
 ## What is MuseumJava?
 MuseumJava is a website where you can explore and learn about indonesian island: Java culture, With a very beautiful and highly interacity user experience.
 
+The [Data](https://docs.google.com/document/d/142MBzkj1v46nXbYyxbtz8qq7ec5Uc2PS47JKt2nGR3Y/edit?usp=sharing) we collected!
+
 ## Project structure
 
 ```
