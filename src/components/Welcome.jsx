@@ -20,16 +20,15 @@ export default function Welcome() {
           Explore
         </button>
       </div>
+
       <div className="h-full w-full md:w-[60%] lg:w-[56%] aspect-square pt-10">
-        <LazyLoadImage
+        <img
           src={Image}
           alt="Header Image"
           draggable="false"
           rel="preload"
-          placeholderSrc={PlaceholderImage}
           width={"100%"}
           height={"100%"}
-          effect="blur"
           className="object-cover object-center sm:rounded-tl-[30%] relative"
         />
       </div>
